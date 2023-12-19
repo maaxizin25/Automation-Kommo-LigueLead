@@ -10,7 +10,6 @@ export const list: { id: string | null; name: string | null } = {
   name: null,
 };
 export const numbers: string[] = [];
-
 app.use(json());
 
 app.use("/webhook-ligue-lead", appRoutes);
