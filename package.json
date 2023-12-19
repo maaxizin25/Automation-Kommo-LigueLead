@@ -1,7 +1,7 @@
 {
-  "name": "astromix-be",
-  "version": "1.0.0",
-  "description": "",
+  "name": "automation-n8n",
+  "version": "1.0",
+  "description": "Automação Back-end para gerenciamento de leads",
   "main": "index.js",
   "dependencies": {
     "axios": "^1.6.2",
