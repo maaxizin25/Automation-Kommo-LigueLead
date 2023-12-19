@@ -1,5 +1,5 @@
 import { list } from "../../app";
-import { api } from "../api";
+import { api } from "../axios/api";
 
 interface getList {
   id: string;
