@@ -3,6 +3,7 @@ import express, { Application, json } from "express";
 import { appRoutes } from "./routes/app/app.routes";
 import { handleErrors } from "./errors";
 import { CronJob } from "cron";
+import { api } from "./services/axios/api";
 
 export const app: Application = express();
 
@@ -14,11 +15,12 @@ export const numbers: string[] = [];
 
 new CronJob(
   "00 21 * * * ",
-  function () {
-    console.log(numbers);
+  async function () {
+    await api.delete(`list/${list.id}`);
     list.id = null;
     list.name = null;
     numbers.length = 0;
+    console.log("Executei a deleção da lista as 21h");
   },
   null,
   true,
