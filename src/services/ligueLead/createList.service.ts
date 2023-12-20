@@ -2,7 +2,6 @@ import { list } from "../../app";
 import { api } from "../axios/api";
 
 export const createListService = async (date: string): Promise<string> => {
-  console.log(date);
   await api
     .post("list", {
       title: date,

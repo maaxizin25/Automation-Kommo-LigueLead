@@ -13,7 +13,7 @@ export const verifyExistsListMiddleware = async (
     return next();
   } else {
     const date = new Date();
-    date.setDate(date.getDate() + 1);
+    date.setDate(date.getDate());
     const fullDate = date.toLocaleDateString("pt-BR");
     const response = await api.get("list");
     const searchList: { id: string; title: string } = response.data.data.find(
